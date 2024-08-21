@@ -6,9 +6,8 @@ const drink_ingredients = get(".drink-ingredients");
 const drink_image = get(".drink-img");
 
 const displaySingleDrink = (data) => {
-  console.log(data.drinks);
-  // const {}
-  const { strDrink: name, strDrinkThumb: image, strInstructions: desc } = data;
+  const drink = data.drinks[0];
+  const { strDrink: name, strDrinkThumb: image, strInstructions: desc } = drink;
   const list_ingredients = [
     drink.strIngredient1,
     drink.strIngredient2,
@@ -23,7 +22,7 @@ const displaySingleDrink = (data) => {
     .join("");
   drink_name.textContent = name;
   drink_desc.textContent = desc;
-  drink_ingredients.textContent = list_ingredients;
+  drink_ingredients.innerHTML = list_ingredients;
   drink_image.textContent = image;
 };
 
