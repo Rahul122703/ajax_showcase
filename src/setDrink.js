@@ -5,6 +5,7 @@ const setDrink = (section) => {
     console.log(clicked_drink_id);
     window.location.replace("drink.html");
   });
+  localStorage.removeItem("clicked_drink");
   localStorage.setItem("clicked_drink", clicked_drink_id);
 };
 
