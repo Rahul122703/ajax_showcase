@@ -23,7 +23,7 @@ const displaySingleDrink = (data) => {
   drink_name.textContent = name;
   drink_desc.textContent = desc;
   drink_ingredients.innerHTML = list_ingredients;
-  drink_image.textContent = image;
+  drink_image.src = image;
 };
 
 export default displaySingleDrink;
